@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "this is day-3",
   "scripts": {
-    "start" : "npx parcel index.html",
-    "build" : "npx parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/sanket-20/Namaste-React#readme",
   "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "babel-plugin-transform-remove-consoles": "^1.0.7",
     "parcel": "^2.9.1",
     "process": "^0.11.10"
   },
