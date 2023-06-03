@@ -18,6 +18,9 @@
  */
 
 import React from "react";
+// import { createElement } from "react";
+// import { createElement as ce } from "react";
+
 import ReactDOM from "react-dom/client";
 
 
@@ -34,19 +37,58 @@ const heading = React.createElement(
     "heading 1"
 );
 
+// const heading = createElement(
+//     "h1",
+//     {
+//         id: "title",
+//         key: "h1"
+//     },
+//     "heading 1"
+// );
+
+// const heading = ce(
+//     "h1",
+//     {
+//         id: "title",
+//         key: "h1"
+//     },
+//     "heading 1"
+// );
+
+
+
+
 
 // React.createElement => Object => HTML code(DOM)
 
 console.log(heading);
 
-const heading1 = React.createElement(
-    "h1",
-    {
-        id: 'title',
-        key: "h2"
-    },
-    "heading for parcel"
-);
+// const heading1 = React.createElement(
+//     "h1",
+//     {
+//         id: 'title',
+//         key: "h2"
+//     },
+//     "heading for parcel"
+// );
+
+// const heading1 = createElement(
+//     "h1",
+//     {
+//         id: 'title',
+//         key: "h2"
+//     },
+//     "heading for parcel"
+// );
+
+// const heading1 = ce(
+//     "h1",
+//     {
+//         id: 'title',
+//         key: "h2"
+//     },
+//     "heading for parcel"
+// );
 
 /**
  * <div class="header">
@@ -93,7 +135,13 @@ const heading1 = React.createElement(
 // );
 
 
-//JSX => 
+//JSX => uses React.createElement() that converted into Object then object id converted into (HTML(DOM))
+
+const heading2 = (
+    <h1 id="title" key="h2">
+        Namaste React
+    </h1>
+);
 
 // console.log(container);
 
@@ -101,4 +149,6 @@ const heading1 = React.createElement(
 // create root using createRoot
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // passing react element inside root
-root.render(container);
+// root.render(container);
+
+root.render(heading);
