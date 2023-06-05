@@ -172,5 +172,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(heading);
 // root.render(heading2);
 root.render(<HeaderComponent/>);
+// root.render(HeaderComponent());
 
 
