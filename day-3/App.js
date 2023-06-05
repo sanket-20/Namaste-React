@@ -136,19 +136,41 @@ console.log(heading);
 
 
 //JSX => uses React.createElement() that converted into Object then object id converted into (HTML(DOM))
-
 const heading2 = (
-    <h1 id="title" key="h2">
+    <h1 id="title" key="/h2">
         Namaste React
     </h1>
 );
 
+const Title = () => (
+    <h1 id="title" key="/h2">
+        Namaste React
+    </h1>
+);
+//React components:
+    // -Functional - New 
+    // -class comp - old way of writing a code
+
+const  HeaderComponent = () =>{
+    return (
+        <div>
+            <Title/>
+            {console.log("Any Js code")}
+            {/* {Title()} */}
+            {/* {heading2} */}
+            <h1>Namaste React functional Component</h1>
+            <h2>This is a h2 tag</h2>
+        </div>
+    )
+}
 // console.log(container);
-
-
 // create root using createRoot
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // passing react element inside root
 // root.render(container);
 
-root.render(heading);
+// root.render(heading);
+// root.render(heading2);
+root.render(<HeaderComponent/>);
+
+
