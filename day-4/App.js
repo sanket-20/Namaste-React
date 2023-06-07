@@ -144,7 +144,7 @@ const heading2 = (
 
 const Title = () => (
     <h1 id="title" key="/h2">
-        Namaste React
+        Food Villa
     </h1>
 );
 //React components:
