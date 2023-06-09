@@ -163,6 +163,30 @@ const  HeaderComponent = () =>{
         </div>
     )
 }
+
+
+const AppLayout = ()=>{
+    return(
+        {
+            /**
+             * Header
+             *      -logo(left side)
+             *      -Nav Items(right side)
+             *      -cart
+             * Body
+             *  -search bar
+             *  -RestaurantList
+             *      -Image
+             *      -Description
+             *      -Name
+             *      -Rating
+             *      -Cusines
+             * 
+             * Footer
+             */
+        }
+    )
+}
 // console.log(container);
 // create root using createRoot
 const root = ReactDOM.createRoot(document.getElementById('root'));
