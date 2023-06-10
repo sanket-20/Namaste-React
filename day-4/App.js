@@ -153,13 +153,25 @@ const Title = () => (
 
 const  HeaderComponent = () =>{
     return (
-        <div>
+        // <div>
+        //     {/* <Title/> */}
+        //     {console.log("Any Js code")}
+        //     {/* {Title()} */}
+        //     {/* {heading2} */}
+        //     {/* <h1>Namaste React functional Component</h1>
+        //     <h2>This is a h2 tag</h2> */}
+        // </div>
+
+        <div className="header">
             <Title/>
-            {console.log("Any Js code")}
-            {/* {Title()} */}
-            {/* {heading2} */}
-            <h1>Namaste React functional Component</h1>
-            <h2>This is a h2 tag</h2>
+            <div className="nav-items">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>cart</li>x
+                </ul>
+            </div>
         </div>
     )
 }
