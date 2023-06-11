@@ -144,14 +144,17 @@ const heading2 = (
 
 const Title = () => (
     <h1 id="title" key="/h2">
-        Food Villa
+        {/* Food Villa */}
+        <a href="/">
+            <img className="logo" src="https://lh5.googleusercontent.com/p/AF1QipOhHeCaQ6Xb6RVf3R_ZBTbDK4FIug_203rKsHLT" alt="" />
+        </a>
     </h1>
 );
 //React components:
     // -Functional - New 
     // -class comp - old way of writing a code
 
-const  HeaderComponent = () =>{
+const  Header = () =>{
     return (
         // <div>
         //     {/* <Title/> */}
@@ -169,36 +172,63 @@ const  HeaderComponent = () =>{
                     <li>Home</li>
                     <li>About</li>
                     <li>Contact</li>
-                    <li>cart</li>x
+                    <li>cart</li>
                 </ul>
             </div>
         </div>
     )
 }
 
-
-const AppLayout = ()=>{
+const Body = ()=>{
     return(
-        {
-            /**
-             * Header
-             *      -logo(left side)
-             *      -Nav Items(right side)
-             *      -cart
-             * Body
-             *  -search bar
-             *  -RestaurantList
-             *      -Image
-             *      -Description
-             *      -Name
-             *      -Rating
-             *      -Cusines
-             * 
-             * Footer
-             */
-        }
+        <h4>Body</h4>
     )
 }
+
+const Footer = ()=>{
+    return(
+        <h4>Footer</h4>
+    )
+}
+
+// const AppLayout = ()=>{
+//     return(
+//         // {
+//         //     /**
+//         //      * Header
+//         //      *      -logo(left side)
+//         //      *      -Nav Items(right side)
+//         //      *      -cart
+//         //      * Body
+//         //      *  -search bar
+//         //      *  -RestaurantList
+//         //      *      -Image
+//         //      *      -Description
+//         //      *      -Name
+//         //      *      -Rating
+//         //      *      -Cusines
+//         //      * 
+//         //      * Footer
+//         //      */
+
+//         // }
+//         <Header/>
+//         <Body/>
+//         <Footer/>
+//     )
+// }
+
+
+// React.Fragment
+// -jsx has only have one parent
+
+
+const jsx =(
+    <React.Fragment>
+        <h1>JSX</h1>
+        <h1>Second JSX</h1>
+    </React.Fragment>
+);
 // console.log(container);
 // create root using createRoot
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -207,7 +237,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // root.render(heading);
 // root.render(heading2);
-root.render(<HeaderComponent/>);
+root.render(jsx);
 // root.render(HeaderComponent());
 
 
