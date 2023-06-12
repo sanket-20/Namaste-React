@@ -176,6 +176,17 @@ const  Header = () =>{
                 </ul>
             </div>
         </div>
+    );
+};
+
+const RestaurantCard = () =>{
+    return(
+        <div className="card">
+            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ee5f8e06b300efc07c9fe3f4df40dfc4" alt="" />
+            <h2>Burger king</h2>
+            <h3>Burgers, American</h3>
+            <h4>4.2 stars</h4>
+        </div>
     )
 }
 
@@ -223,12 +234,12 @@ const Footer = ()=>{
 // -jsx has only have one parent
 
 
-const jsx =(
-    <React.Fragment>
-        <h1>JSX</h1>
-        <h1>Second JSX</h1>
-    </React.Fragment>
-);
+// const jsx =(
+//     <>
+//         <h1>JSX</h1>
+//         <h1>Second JSX</h1>
+//     </>
+// );
 // console.log(container);
 // create root using createRoot
 const root = ReactDOM.createRoot(document.getElementById('root'));
