@@ -1,0 +1,34 @@
+{
+  "name": "day-4",
+  "version": "1.0.0",
+  "description": "this is day-4",
+  "dependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "parcel": "^2.9.1",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanket-20/Namaste-React.git"
+  },
+  "keywords": [
+    "Reactjs"
+  ],
+  "author": "sanket gupte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanket-20/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/sanket-20/Namaste-React#readme",
+  "main": "App.js"
+}

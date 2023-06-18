@@ -1,11 +1,7 @@
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import { restaurantList } from "../config";
 import RestaurantCard from "./RestaurantCard";
 
-
-// what is state?
-// what is hook?
-// what is useState()
 
 function filterData(searchText, restaurants) {
     const filterData = restaurantList.filter((restaurant) =>
@@ -17,22 +13,25 @@ function filterData(searchText, restaurants) {
 
 
 const Body = () => {
-    // const searchText = "KFC";
-
-    // searchText is local state var
-    // const [searchInput, setSearchInput] = useState("KFC");
-
-
-    // const  searchvar = useState("KFC");//return [var_name, fun to update the var]
-
-    // const [ searchText, setSearchText] = searchvar;
-    // const stext = "KFC";
     const [restaurants, setRestaurants] = useState(restaurantList);
     const [searchText, setSearchText] = useState("");//return [var_name, fun to update the var]
 
-    // eg
-    // const searchClicked = false;
-    // const [searchClicked, setSearchClicked] = useState("false");
+
+    // empty dependency array => once after rendering
+    // dependency array [searchText]=> once after inital render + everytime after render my searchText is changes
+
+    useEffect(()=>{
+        // console.log("call that when dependency is changed");
+        getRestaurants();
+    }, []);
+
+    async function getRestaurants(){
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        console.log(json);
+        // optional chaning
+        setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    }
 
     return (
         <>
@@ -52,19 +51,7 @@ const Body = () => {
                     // update the state - restaurants
                     setRestaurants(data);
                 }}>Search</button>
-                
-                {/* <h1>{searchText}</h1> */}
             </div>
-            {/* <h1>{searchClicked}</h1>
-            <button onClick={()=>{
-                if(searchClicked === "true"){
-                    setSearchClicked("false");
-                }
-                else{
-                    setSearchClicked("true");
-                }
-            }}>Search</button> */}
-
 
             <div className="restaurant-list">
                 {
