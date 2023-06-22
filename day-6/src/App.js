@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 // Default import
 import Header from "./components/Header";
 // // Named import
-// import { Title } from "./components/Header"
+// import { Title } from "./components/Header.js"
 
 
 // Config driven UI
